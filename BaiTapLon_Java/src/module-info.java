@@ -1,0 +1,2 @@
+module BaiTapLon_Java {
+}
