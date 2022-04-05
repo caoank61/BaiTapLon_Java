@@ -110,6 +110,10 @@ public class Hoc_Sinh {
 	public void setDiem_Dia(float diem_Dia) {
 		Diem_Dia = diem_Dia;
 	}
+	public int Tinh_Tuoi () {
+		int tuoi = 0;
+		return tuoi = 2022- Nam;
+	}
 	public void Nhap_Thong_Tin_Hoc_Sinh () {
 		Scanner sc = new Scanner (System.in);
 		// Nhập thông tin cơ bản của một học sinh
@@ -128,6 +132,7 @@ public class Hoc_Sinh {
 		Thang = sc.nextInt();
 		System.out.print("Nhap Nam Sinh: ");
 		Nam = sc.nextInt();
+		
 		// Nhập thông tin điểm các môn của học sinh
 		System.out.println("Nhap Diem Hoc Sinh!!!");
 		System.out.print("Nhap Diem Toan: ");
@@ -144,6 +149,6 @@ public class Hoc_Sinh {
 		Diem_Dia = sc.nextFloat();
 	}
 	public void Xuat_Thong_Tin_Hoc_Sinh () {
-		System.out.println("MSHS: " + MSHS +" || Ten: "+ HoTen +" || Lop: "+ Lop + " || Dia chi: "+ Dia_Chi + " || Ngay Thang Nam Sinh: "+Ngay +"/"+Thang+ "/"+Nam+" || Toan: "+Diem_Toan+" || Ly: "+Diem_Ly+" || Hoa: "+Diem_Hoa+" || Van: "+Diem_Van+" || Su: "+Diem_Su+" || Dia: "+Diem_Dia);
+		System.out.println("MSHS: " + MSHS +" || Ten: "+ HoTen +" || Lop: "+ Lop + " || Dia chi: "+ Dia_Chi + " || Ngay Thang Nam Sinh: "+Ngay +"/"+Thang+ "/"+Nam+" || Tuoi: "+Tinh_Tuoi()+" || Toan: "+Diem_Toan+" || Ly: "+Diem_Ly+" || Hoa: "+Diem_Hoa+" || Van: "+Diem_Van+" || Su: "+Diem_Su+" || Dia: "+Diem_Dia);
 	}
 }
