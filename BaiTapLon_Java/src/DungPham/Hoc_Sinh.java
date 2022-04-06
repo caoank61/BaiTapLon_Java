@@ -114,6 +114,10 @@ public class Hoc_Sinh {
 		int tuoi = 0;
 		return tuoi = 2022- Nam;
 	}
+	public float Tinh_DiemTB() {
+		float tb = (Diem_Toan + Diem_Ly +Diem_Hoa + Diem_Van + Diem_Su + Diem_Dia)/6;
+		return tb;
+	}
 	public void Nhap_Thong_Tin_Hoc_Sinh () {
 		Scanner sc = new Scanner (System.in);
 		// Nhập thông tin cơ bản của một học sinh
@@ -149,6 +153,6 @@ public class Hoc_Sinh {
 		Diem_Dia = sc.nextFloat();
 	}
 	public void Xuat_Thong_Tin_Hoc_Sinh () {
-		System.out.println("MSHS: " + MSHS +" || Ten: "+ HoTen +" || Lop: "+ Lop + " || Dia chi: "+ Dia_Chi + " || Ngay Thang Nam Sinh: "+Ngay +"/"+Thang+ "/"+Nam+" || Tuoi: "+Tinh_Tuoi()+" || Toan: "+Diem_Toan+" || Ly: "+Diem_Ly+" || Hoa: "+Diem_Hoa+" || Van: "+Diem_Van+" || Su: "+Diem_Su+" || Dia: "+Diem_Dia);
+		System.out.println("MSHS: " + MSHS +" || Ten: "+ HoTen +" || Lop: "+ Lop + " || Dia chi: "+ Dia_Chi + " || Ngay Thang Nam Sinh: "+Ngay +"/"+Thang+ "/"+Nam+" || Tuoi: "+Tinh_Tuoi()+" || Toan: "+Diem_Toan+" || Ly: "+Diem_Ly+" || Hoa: "+Diem_Hoa+" || Van: "+Diem_Van+" || Su: "+Diem_Su+" || Dia: "+Diem_Dia + " || Diem Trung Binh: " + Tinh_DiemTB());
 	}
 }

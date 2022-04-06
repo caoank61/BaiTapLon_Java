@@ -12,7 +12,9 @@ public class QuanLyHocSinh {
 //		b.Nhap_Hoc_Sinh_Chuyen();
 //		b.Xuat_Hoc_Sinh_Chuyen();
 		a.Nhap_Nhieu_Hs();
+		a.sortDiem_TB();
 		a.Xuat_Nhieu_Hs();
+		
 //		
 	}
 

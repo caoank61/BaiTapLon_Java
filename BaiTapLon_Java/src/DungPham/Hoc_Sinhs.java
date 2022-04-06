@@ -28,14 +28,34 @@ public class Hoc_Sinhs implements Comparator<Hoc_Sinh>{
 			i.Xuat_Thong_Tin_Hoc_Sinh();
 		}
 	}
-	Hoc_Sinh.sort(Hoc_Sinh, new Comparator<Hoc_Sinhs>() {
-
-        public int compare(Hoc_Sinh t, Hoc_Sinh t1) {
-            int comp = t.getHoTen().compareTo(t1.getHoTen());
-            if (comp != 0) {    // names are different
-                return comp;
-            }
-            return t.Tinh_Tuoi() - t1.Tinh_Tuoi();
+	@Override
+	public int compare(Hoc_Sinh o1, Hoc_Sinh o2) {
+		int comp = o1.getHoTen().compareTo(o2.getHoTen());
+        if (comp != 0) {    // names are different
+            return comp;
+        }else {
+        	if ( o1.Tinh_Tuoi() > o2.Tinh_Tuoi())
+        		return 1;
+        	else return -1;
         }
-    };
+	}
+	public void sortName_HS() {
+		Collections.sort(hs,new Hoc_Sinhs());
+	}
+	public void sortDiem_TB() {
+		Hoc_Sinh t = new Hoc_Sinh();
+		for(int i = 0 ;i < hs.size()-1;i++){
+			for(int j = i+1; j< hs.size();j++ ){
+				if(hs.elementAt(i).Tinh_DiemTB() > hs.elementAt(j).Tinh_DiemTB()){
+					Collections.swap(hs, i, j);
+//					t = hs.elementAt(i);
+//					hs.elementAt(i) = hs.elementAt(j);
+//					hs.elementAt(j) = t;
+				}
+			}
+		}
+	}
+	public void search_MS() {
+		Collections.swap(hs, 0, 0);
+	}
 }
