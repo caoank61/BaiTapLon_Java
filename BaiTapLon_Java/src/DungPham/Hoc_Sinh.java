@@ -152,6 +152,7 @@ public class Hoc_Sinh {
 		System.out.print("Nhap Diem Dia: ");
 		Diem_Dia = sc.nextFloat();
 	}
+
 	public void Xuat_Thong_Tin_Hoc_Sinh () {
 		System.out.println("MSHS: " + MSHS +" || Ten: "+ HoTen +" || Lop: "+ Lop + " || Dia chi: "+ Dia_Chi + " || Ngay Thang Nam Sinh: "+Ngay +"/"+Thang+ "/"+Nam+" || Tuoi: "+Tinh_Tuoi()+" || Toan: "+Diem_Toan+" || Ly: "+Diem_Ly+" || Hoa: "+Diem_Hoa+" || Van: "+Diem_Van+" || Su: "+Diem_Su+" || Dia: "+Diem_Dia + " || Diem Trung Binh: " + Tinh_DiemTB());
 	}

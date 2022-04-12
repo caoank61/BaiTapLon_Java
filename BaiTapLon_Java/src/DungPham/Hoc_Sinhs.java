@@ -17,10 +17,17 @@ public class Hoc_Sinhs implements Comparator<Hoc_Sinh>{
 		Scanner sc = new Scanner (System.in);
 		System.out.print("Nhap So Luong Hoc Sinh:");
 		n = sc.nextInt();
+		
 		for (int i = 0; i < n ;i++) {
-			Hoc_Sinh st = new Hoc_Sinh ();
-			st.Nhap_Thong_Tin_Hoc_Sinh();
-			hs.add(st);
+			Hoc_Sinh sd = new Hoc_Sinh ();
+				do {
+					sd.Nhap_Thong_Tin_Hoc_Sinh();
+					if (check (sd.getMSHS()) == true) {
+						System.out.println("Ma So Hoc Sinh Da Ton Tai !");
+						System.out.println("Vui Long Nhap Lai Thong Tin!");
+					}
+				}while(check (sd.getMSHS()) == true);
+				hs.add(sd);
 		}
 	}
 	public void Xuat_Nhieu_Hs () {
@@ -48,14 +55,26 @@ public class Hoc_Sinhs implements Comparator<Hoc_Sinh>{
 			for(int j = i+1; j< hs.size();j++ ){
 				if(hs.elementAt(i).Tinh_DiemTB() > hs.elementAt(j).Tinh_DiemTB()){
 					Collections.swap(hs, i, j);
-//					t = hs.elementAt(i);
-//					hs.elementAt(i) = hs.elementAt(j);
-//					hs.elementAt(j) = t;
 				}
 			}
 		}
 	}
-	public void search_MS() {
-		Collections.swap(hs, 0, 0);
+	public boolean check (String h){
+	    for (int i = 0; i < hs.size() ; i++){
+	        if (h == hs.elementAt(i).getMSHS())
+	         return true;
+	    }
+	    return false;
+	}
+	public void search_MS(String h) {
+		for(int i = 0 ;i < hs.size();i++){
+			if(hs.elementAt(i).getMSHS()==h){
+				hs.elementAt(i).Xuat_Thong_Tin_Hoc_Sinh();
+			   	break;
+			}else {
+				System.out.println("Khong Ton Tai Ma So " + h + " Trong Danh Sach!");
+			}
+		}
+		
 	}
 }
