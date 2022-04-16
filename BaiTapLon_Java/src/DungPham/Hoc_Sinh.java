@@ -159,7 +159,7 @@ public class Hoc_Sinh {
 			System.out.print("Nhap Diem Toan: ");
 			Diem_Toan = sc.nextFloat();
 			if (Diem_Toan < 0 || Diem_Toan > 10) {
-				System.out.println("Nhap Lai Diem Toan:");
+				System.out.print("Nhap Lai Diem Toan:");
 				Diem_Toan = sc.nextFloat();
 			}
 		}while (Diem_Toan < 0 || Diem_Toan > 10);
@@ -167,7 +167,7 @@ public class Hoc_Sinh {
 			System.out.print("Nhap Diem Ly: ");
 			Diem_Ly = sc.nextFloat();
 			if (Diem_Ly < 0 || Diem_Ly > 10) {
-				System.out.println("Nhap Lai Diem Ly:");
+				System.out.print("Nhap Lai Diem Ly:");
 				Diem_Ly = sc.nextFloat();
 			}
 		}while (Diem_Ly < 0 || Diem_Ly > 10);
@@ -175,7 +175,7 @@ public class Hoc_Sinh {
 			System.out.print("Nhap Diem Hoa: ");
 			Diem_Hoa = sc.nextFloat();
 			if (Diem_Hoa < 0 || Diem_Hoa > 10) {
-				System.out.println("Nhap Lai Diem Hoa:");
+				System.out.print("Nhap Lai Diem Hoa:");
 				Diem_Hoa = sc.nextFloat();
 			}
 		}while (Diem_Hoa < 0 || Diem_Hoa > 10);
@@ -183,7 +183,7 @@ public class Hoc_Sinh {
 			System.out.print("Nhap Diem Van: ");
 			Diem_Van = sc.nextFloat();
 			if (Diem_Van < 0 || Diem_Van > 10) {
-				System.out.println("Nhap Lai Diem Van:");
+				System.out.print("Nhap Lai Diem Van:");
 				Diem_Van = sc.nextFloat();
 			}
 		}while (Diem_Van < 0 || Diem_Van > 10);
@@ -191,7 +191,7 @@ public class Hoc_Sinh {
 			System.out.print("Nhap Diem Su: ");
 			Diem_Su = sc.nextFloat();
 			if (Diem_Su < 0 || Diem_Su > 10) {
-				System.out.println("Nhap Lai Diem Su:");
+				System.out.print("Nhap Lai Diem Su:");
 				Diem_Su = sc.nextFloat();
 			}
 		}while (Diem_Su < 0 || Diem_Su > 10);
@@ -199,7 +199,7 @@ public class Hoc_Sinh {
 			System.out.print("Nhap Diem Dia: ");
 			Diem_Dia = sc.nextFloat();
 			if (Diem_Dia < 0 || Diem_Dia > 10) {
-				System.out.println("Nhap Lai Diem Dia:");
+				System.out.print("Nhap Lai Diem Dia:");
 				Diem_Dia = sc.nextFloat();
 			}
 		}while (Diem_Dia < 0 || Diem_Dia > 10);

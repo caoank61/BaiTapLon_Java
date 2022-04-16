@@ -19,14 +19,16 @@ public class Hoc_Sinhs implements Comparator<Hoc_Sinh>{
 		n = sc.nextInt();
 		
 		for (int i = 0; i < n ;i++) {
-			Hoc_Sinh sd = new Hoc_Sinh ();
+			Hoc_Sinh sd;
 				do {
+					sd = new Hoc_Sinh ();
 					sd.Nhap_Thong_Tin_Hoc_Sinh();
-					if (check (sd.getMSHS()) == true) {
+					if (check (sd.getMSHS())) {
+						System.out.println();
 						System.out.println("Ma So Hoc Sinh Da Ton Tai !");
 						System.out.println("Vui Long Nhap Lai Thong Tin!");
 					}
-				}while(check (sd.getMSHS()) == true);
+				}while(check (sd.getMSHS()));
 				hs.add(sd);
 		}
 	}
@@ -61,20 +63,59 @@ public class Hoc_Sinhs implements Comparator<Hoc_Sinh>{
 	}
 	public boolean check (String h){
 	    for (int i = 0; i < hs.size() ; i++){
-	        if (h == hs.elementAt(i).getMSHS())
+	        if (h.equals(hs.elementAt(i).getMSHS()))
 	         return true;
 	    }
 	    return false;
 	}
 	public void search_MS(String h) {
+		int count = 0;
 		for(int i = 0 ;i < hs.size();i++){
-			if(hs.elementAt(i).getMSHS()==h){
+			if(h.equals(hs.elementAt(i).getMSHS())){
 				hs.elementAt(i).Xuat_Thong_Tin_Hoc_Sinh();
+				count ++;
 			   	break;
-			}else {
-				System.out.println("Khong Ton Tai Ma So " + h + " Trong Danh Sach!");
 			}
 		}
-		
+		if (count == 0) {
+			System.out.println("Khong Ton Tai Ma So " + h + " Trong Danh Sach!");
+		}
+	}
+	public void Them_hs() {
+			Hoc_Sinh sd;
+				do {
+					sd = new Hoc_Sinh ();
+					sd.Nhap_Thong_Tin_Hoc_Sinh();
+					if (check (sd.getMSHS())) {
+						System.out.println();
+						System.out.println("Ma So Hoc Sinh Da Ton Tai !");
+						System.out.println("Vui Long Nhap Lai Thong Tin!");
+					}
+				}while(check (sd.getMSHS()));
+				hs.add(sd);
+	}
+//	public void Sua_hs(String h) {
+//		Hoc_Sinh sd;
+//		for(int i = 0 ;i < hs.size();i++){
+//			sd = new Hoc_Sinh ();
+//			if (check (sd.getMSHS()){
+//				hs.replaceAll(sd);
+//			}
+//		}
+//	}
+	public void Xoa_hs(String h) {
+		Hoc_Sinh sd;
+		int count = 0;
+		for(int i = 0 ;i < hs.size();i++){
+			sd = new Hoc_Sinh ();
+			if (check (h)) {
+				hs.remove(sd);
+				count ++;
+				break;
+			}
+		}
+		if (count == 0) {
+			System.out.println("Khong Ton Tai Hoc Sinh Can Xoa!");
+		}
 	}
 }
