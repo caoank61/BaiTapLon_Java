@@ -18,6 +18,7 @@ public class Hoc_Sinh_Chuyen extends Hoc_Sinh{
 		Diem_Mon_Chuyen = sc.nextFloat();
 	}
 	public void Xuat_Hoc_Sinh_Chuyen() {
-		System.out.println("Chuyen Mon: "+ Mon_Chuyen + " || Diem: "+Diem_Mon_Chuyen);
+		System.out.print(" Chuyen Mon: "+ Mon_Chuyen + " || Diem: "+Diem_Mon_Chuyen);
 	}
+
 }

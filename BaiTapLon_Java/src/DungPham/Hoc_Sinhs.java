@@ -94,22 +94,15 @@ public class Hoc_Sinhs implements Comparator<Hoc_Sinh>{
 				}while(check (sd.getMSHS()));
 				hs.add(sd);
 	}
-//	public void Sua_hs(String h) {
-//		Hoc_Sinh sd;
-//		for(int i = 0 ;i < hs.size();i++){
-//			sd = new Hoc_Sinh ();
-//			if (check (sd.getMSHS()){
-//				hs.replaceAll(sd);
-//			}
-//		}
-//	}
+	public void Sua_hs(String h) {
+		Xoa_hs(h);
+		Them_hs ();
+	}
 	public void Xoa_hs(String h) {
-		Hoc_Sinh sd;
 		int count = 0;
 		for(int i = 0 ;i < hs.size();i++){
-			sd = new Hoc_Sinh ();
-			if (check (h)) {
-				hs.remove(sd);
+			if (hs.elementAt(i).getMSHS().equals(h)) {
+				hs.remove(hs.elementAt(i));
 				count ++;
 				break;
 			}
@@ -118,4 +111,17 @@ public class Hoc_Sinhs implements Comparator<Hoc_Sinh>{
 			System.out.println("Khong Ton Tai Hoc Sinh Can Xoa!");
 		}
 	}
+	public int size() {
+		return hs.size();
+	}
+	public Object elementAt(int i) {
+		return hs.elementAt(i);
+	}
 }
+//	public void Out_File () {
+//		//E:\HKII (2021_2022)\BaiTapLon_Java\BaiTapLon_Java\src
+//		FileWriter fw = new FileWriter("D:\\testout.txt");
+//        fw.write("Welcome to java.");
+//        fw.close();
+//	}
+//}
