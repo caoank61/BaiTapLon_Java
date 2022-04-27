@@ -31,7 +31,10 @@ public class QuanLyHocSinh {
 //		a.Xuat_Nhieu_Hs();
 		
 		a.Them_HocSinh_Chuyen();
-		a.Xuat_HS_Chuyen();
+		System.out.println("DANH SACH HOC SINH CHUYEN !!!");
+		a.Xuat_HS_Chuyens();
+		System.out.println("DANH SACH HOC SINH ");
+		a.Xuat_HS();
 
 	}
 

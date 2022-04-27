@@ -12,13 +12,20 @@ public class Hoc_Sinh_Chuyen extends Hoc_Sinh{
 	}
 	public void Nhap_Hoc_Sinh_Chuyen () {
 		Scanner sc = new Scanner (System.in);
-		System.out.println("Nhap Mon Chuyen: ");
+		System.out.print("Nhap Mon Chuyen: ");
 		Mon_Chuyen = sc.nextLine();
-		System.out.println("Nhap Diem Mon Chuyen: ");
-		Diem_Mon_Chuyen = sc.nextFloat();
+		do {
+			System.out.print("Nhap Diem Mon Chuyen: ");
+			Diem_Mon_Chuyen = sc.nextFloat();
+			if (Diem_Mon_Chuyen < 0 || Diem_Mon_Chuyen > 10) {
+				System.out.print("Nhap Lai Diem Mon Chuyen:");
+				Diem_Mon_Chuyen = sc.nextFloat();
+			}
+		}while (Diem_Mon_Chuyen < 0 || Diem_Mon_Chuyen > 10);
 	}
 	public void Xuat_Hoc_Sinh_Chuyen() {
-		System.out.print(" Chuyen Mon: "+ Mon_Chuyen + " || Diem: "+Diem_Mon_Chuyen);
+		super.Xuat_Thong_Tin_Hoc_Sinh();
+		System.out.println("	-------	Chuyen Mon: "+ Mon_Chuyen + " || Diem: "+Diem_Mon_Chuyen);
 	}
 
 }

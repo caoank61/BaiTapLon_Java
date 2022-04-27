@@ -117,7 +117,69 @@ public class Hoc_Sinhs implements Comparator<Hoc_Sinh>{
 	public Object elementAt(int i) {
 		return hs.elementAt(i);
 	}
+	public void Phan_Loai_Hoc_Sinh ()	{
+		System.out.println("***DANH SACH PHAN LOAI SINH VIEN***");
+		int lc = 0;
+		Scanner sc = new Scanner (System.in);
+		lc = sc.nextInt();
+		switch(lc)
+		{	
+			case 1:
+			{
+				System.out.println("1.DANH SACH SINH VIEN GIOI");
+				for(int i =0;i< hs.size();i++)
+				{
+					if(hs.elementAt(i).Tinh_DiemTB() >=8)
+					{
+						hs.elementAt(i).Xuat_Thong_Tin_Hoc_Sinh();
+						System.out.println("DUOC LEN LOP");
+					}
+				}
+				break;
+			}
+			case 2:
+			{
+				System.out.println("3.DANH SACH SINH VIEN KHA");
+				for(int i =0;i< hs.size();i++)
+				{
+					if(hs.elementAt(i).Tinh_DiemTB() >=6.5)
+					{
+						hs.elementAt(i).Xuat_Thong_Tin_Hoc_Sinh();
+						System.out.println("DUOC LEN LOP");
+					}
+				}
+				break;
+			}
+			case 3:
+			{
+				System.out.println("4.DANH SACH SINH VIEN TRUNG BINH");
+				for(int i =0;i<hs.size();i++)
+				{
+					if(hs.elementAt(i).Tinh_DiemTB() >=5)
+					{
+						hs.elementAt(i).Xuat_Thong_Tin_Hoc_Sinh();
+						System.out.println("DUOC LEN LOP");
+					}
+				}
+				break;
+			}
+			case 4:
+			{
+				System.out.println("5.DANH SACH SINH VIEN YEU");
+				for(int i =0;i<hs.size();i++)
+				{
+					if(hs.elementAt(i).Tinh_DiemTB() >=3.5)
+					{
+						hs.elementAt(i).Xuat_Thong_Tin_Hoc_Sinh();
+						System.out.println("THI LAI");
+					}
+				}
+				break;
+			}
+		}
+	}
 }
+
 //	public void Out_File () {
 //		//E:\HKII (2021_2022)\BaiTapLon_Java\BaiTapLon_Java\src
 //		FileWriter fw = new FileWriter("D:\\testout.txt");
