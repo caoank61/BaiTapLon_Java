@@ -51,4 +51,5 @@ public class ChucNang {
 	public void Xuat_HS_Chuyens() {
 		hscs.Xuat_HS_Chuyen();
 	}
+	public void a() {}
 }
