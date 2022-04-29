@@ -1,5 +1,10 @@
 package DungPham;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.Scanner;
 
 public class ChucNang {
@@ -49,5 +54,27 @@ public class ChucNang {
 	}
 	public void Xuat_HS_Chuyens() {
 		hscs.Xuat_HS_Chuyen();
+	}
+	public void connect () {
+		String url = "jdbc:sqlserver://DESKTOP-LDFVOIL\\SQLEXPRESS;databaseNam = QUANLY_HOCSINH";
+		String user = "sa";
+		String password = "dung123";
+		
+		try {
+			Connection cn = DriverManager.getConnection(url, user, password);
+			String sql = "select * from HOCSINHCHUYEN";
+			Statement statement = cn.createStatement();
+			ResultSet result = statement.executeQuery(sql);
+			int count = 0;
+			while (result.next()) {
+				count ++;
+				Hoc_Sinh
+				
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 	}
 }

@@ -1,6 +1,11 @@
 package DungPham;
 
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Scanner;
@@ -178,12 +183,41 @@ public class Hoc_Sinhs implements Comparator<Hoc_Sinh>{
 			}
 		}
 	}
+	public void connect () {
+		String url = "jdbc:sqlserver://DESKTOP-LDFVOIL\\SQLEXPRESS:1433;databaseName = QUANLY_HOCSINH;user = sa;password = dung123;encrypt=false";
+		
+		try {
+			Connection cn = DriverManager.getConnection(url);
+			String sql = "select * from HOCSINH";
+			Statement statement = cn.createStatement();
+			ResultSet result = statement.executeQuery(sql);
+			int count = 0;
+			while (result.next()) {
+				count ++;
+				Hoc_Sinh a = new Hoc_Sinh();
+				a.setMSHS(result.getString("MSHS"));
+				a.setHoTen(result.getString("HoTen"));
+				a.setLop(result.getString("Lop"));
+				a.setDia_Chi(result.getString("Dia_Chi"));
+				a.setNgay(result.getInt("Ngay"));
+				a.setThang(result.getInt("Thang"));
+				a.setNam(result.getInt("Nam"));
+				a.setDiem_Toan(result.getFloat("Diem_Toan"));
+				a.setDiem_Ly(result.getFloat("Diem_Ly"));
+				a.setDiem_Hoa(result.getFloat("Diem_Hoa"));
+				a.setDiem_Van(result.getFloat("Diem_Van"));
+				a.setDiem_Su(result.getFloat("Diem_Su"));
+				a.setDiem_Dia(result.getFloat("Diem_Dia"));
+				hs.add(a);
+			}
+			cn.close();
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
 }
 
-//	public void Out_File () {
-//		//E:\HKII (2021_2022)\BaiTapLon_Java\BaiTapLon_Java\src
-//		FileWriter fw = new FileWriter("D:\\testout.txt");
-//        fw.write("Welcome to java.");
-//        fw.close();
-//	}
-//}
+
