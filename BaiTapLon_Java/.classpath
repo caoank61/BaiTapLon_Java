@@ -6,6 +6,7 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 	<classpathentry kind="lib" path="E:/HKII (2021_2022)/sqljdbc_10.2/enu/mssql-jdbc-10.2.0.jre17.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
